@@ -70,6 +70,7 @@ sup {
 
 img {
   border-style: none;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 button,
@@ -3116,7 +3117,6 @@ body {
 
 .footer--simple {
   align-items: center;
-  justify-content: center;
   padding-top: 0
 }
 
@@ -3126,6 +3126,7 @@ body {
 
 .footer__primary {
   margin: 0;
+  margin-right: -7px;
 }
 
 .footer__end {
@@ -3231,15 +3232,11 @@ body {
 .footer__linkRow {
   display: flex;
   flex-wrap: wrap;
-  font-size: 16px;
-  justify-content: center;
-  gap: 13px;
-  padding: 13px 13px;
-  row-gap: 6px;
 }
 
 .footer__linkRow a {
   color: inherit;
+  margin: 0 7px
 }
 
 .footer__linkGroups {
@@ -4302,7 +4299,7 @@ body {
   justify-content: center !important
 }
 
-@media only screen and (max-width:750px) {
+@media only screen and (max-width: 750px) {
   .ft {
     flex-direction: column;
     min-height: 0;
@@ -4379,8 +4376,18 @@ body {
     justify-content: center
   }
   
+  #footer .footer {
+    flex-direction: column;
+  }
+  
   #footer .footer__social {
     margin: 15px auto;
+  }
+  
+  #footer .footer__primary {
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 5px;
   }
 }
 
@@ -4895,7 +4902,6 @@ html, body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-feature-settings: "kern";
-  font-synthesis: none;
   user-select: text;
   -webkit-user-select: text;
   -webkit-touch-callout: none;
@@ -4908,4 +4914,3 @@ html, body {
 ::selection {
   background: rgba(255, 255, 255, 0.15);
 }
-
